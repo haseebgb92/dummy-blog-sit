@@ -1,0 +1,29 @@
+/*
+Theme Name: TechPulse
+Theme URI: https://www.techpulse.ae
+Author: TechPulse Team
+Author URI: https://www.techpulse.ae
+Description: A modern, SEO-optimized, fully responsive blog theme for technology and AI content. Features a minimalist design with dark mode support, sticky sidebar, and multiple category layouts. Perfect for tech blogs, AI news, gadget reviews, and startup coverage.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: techpulse
+Tags: blog, tech, news, magazine, responsive-layout, custom-menu, featured-images, post-formats, sticky-post, theme-options, translation-ready, dark-mode, accessibility-ready, seo-optimized, one-column, two-columns, three-columns, right-sidebar, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+
+TechPulse WordPress Theme, (C) 2025 TechPulse
+TechPulse is distributed under the terms of the GNU GPL
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* 
+ * Import custom styles from assets/css
+ * This file is for WordPress theme header only
+ */
+
+@import url('assets/css/main.css');
+

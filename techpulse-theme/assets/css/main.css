@@ -1,0 +1,276 @@
+/* Custom CSS for TechPulse Blog */
+
+/* Font Families */
+.font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Navigation Links */
+.nav-link {
+    @apply text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium transition-colors;
+}
+
+.nav-link-mobile {
+    @apply text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium py-2 transition-colors;
+}
+
+/* Post Cards */
+.post-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6;
+}
+
+.featured-card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300;
+}
+
+/* Social Icons */
+.social-icon {
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-500 transition-all duration-300;
+}
+
+.social-icon-large {
+    @apply w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-all duration-300;
+}
+
+.social-icon-footer {
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-all duration-300;
+}
+
+.social-share-btn {
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-500 transition-all duration-300;
+}
+
+/* Footer Links */
+.footer-link {
+    @apply text-gray-400 hover:text-white transition-colors;
+}
+
+/* Category Filters */
+.category-filter.active {
+    @apply bg-blue-500 text-white;
+}
+
+.filter-btn.active {
+    @apply bg-blue-500 text-white;
+}
+
+/* Prose Styling for Articles */
+.prose {
+    @apply text-gray-700 dark:text-gray-300;
+}
+
+.prose h2 {
+    @apply text-3xl font-bold font-space-grotesk mt-8 mb-4 text-gray-900 dark:text-gray-100;
+}
+
+.prose h3 {
+    @apply text-2xl font-bold font-space-grotesk mt-6 mb-3 text-gray-900 dark:text-gray-100;
+}
+
+.prose p {
+    @apply mb-4 leading-relaxed;
+}
+
+.prose ul {
+    @apply list-disc pl-6 mb-4 space-y-2;
+}
+
+.prose ol {
+    @apply list-decimal pl-6 mb-4 space-y-2;
+}
+
+.prose a {
+    @apply text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 underline;
+}
+
+.prose strong {
+    @apply font-semibold text-gray-900 dark:text-gray-100;
+}
+
+.prose code {
+    @apply bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono;
+}
+
+.prose blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic my-4 text-gray-600 dark:text-gray-400;
+}
+
+.prose img {
+    @apply rounded-lg my-6;
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Lazy Loading Images */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Focus Styles */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Loading States */
+.loading {
+    @apply opacity-50 pointer-events-none;
+}
+
+/* Back to Top Button */
+#backToTop {
+    @apply fixed bottom-8 right-8 z-40 opacity-0 pointer-events-none transition-all duration-300;
+}
+
+#backToTop.visible {
+    @apply opacity-100 pointer-events-auto;
+}
+
+/* Mobile Menu Animation */
+#mobileMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobileMenu.open {
+    max-height: 500px;
+}
+
+/* Search Modal */
+#searchModal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#searchModal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Category Posts Animation */
+.post-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Gradient Text */
+.gradient-text {
+    @apply bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    .prose {
+        font-size: 1rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.75rem;
+    }
+    
+    .prose h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Accessibility */
+.skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-500 focus:text-white focus:rounded-lg;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .post-card,
+    .featured-card {
+        @apply border-2 border-gray-400;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Hide Scrollbar for Horizontal Scroll */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Sidebar Sticky Positioning */
+.sticky-sidebar {
+    position: sticky;
+    top: 6rem; /* Adjust based on header height */
+    align-self: start;
+}
+

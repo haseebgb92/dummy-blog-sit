@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Write for Us | TechPulse Guest Writers</title>
+    <meta name="description" content="Become a guest writer for TechPulse. Share your expertise in AI, technology, startups, and innovation. Submit your tech articles and get published.">
+    <meta name="keywords" content="write for us, guest post, tech blog writers, submit article">
+    <link rel="canonical" href="https://www.techpulse.ae/write-for-us.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
+    <!-- Header -->
+    <header id="header" class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
+        <nav class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-space-grotesk bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent">
+                        TechPulse
+                    </a>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="category.html" class="nav-link">Categories</a>
+                    <a href="category.html?cat=ai" class="nav-link">AI</a>
+                    <a href="category.html?cat=gadgets" class="nav-link">Gadgets</a>
+                    <a href="category.html?cat=startups" class="nav-link">Startups</a>
+                    <a href="category.html?cat=reviews" class="nav-link">Reviews</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button id="searchBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Search">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle dark mode">
+                        <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-emerald-500 text-white py-16">
+        <div class="container mx-auto px-4 lg:px-6 text-center">
+            <h1 class="text-5xl lg:text-6xl font-bold font-space-grotesk mb-6">Write for Us</h1>
+            <p class="text-xl lg:text-2xl text-blue-50 max-w-3xl mx-auto">
+                Share your expertise and insights with our tech-savvy audience
+            </p>
+        </div>
+    </section>
+    
+    <!-- Guidelines Section -->
+    <section class="container mx-auto px-4 lg:px-6 py-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold font-space-grotesk mb-6">Submission Guidelines</h2>
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <p class="mb-4">
+                        We welcome guest contributors who are passionate about technology, AI, innovation, and startups. If you have expertise in these areas and want to share your insights with our readers, we'd love to hear from you.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold font-space-grotesk mt-8 mb-4">What We're Looking For</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li>Original, well-researched articles on AI, technology, startups, gadgets, or innovation</li>
+                        <li>Articles between 1,000-2,500 words</li>
+                        <li>Unique perspectives and actionable insights</li>
+                        <li>High-quality content with proper citations and references</li>
+                        <li>Articles that haven't been published elsewhere</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold font-space-grotesk mt-8 mb-4">Topics We Cover</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h4 class="font-bold mb-2">🤖 Artificial Intelligence</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Machine learning, deep learning, AI applications</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h4 class="font-bold mb-2">🚀 Startups & Innovation</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Tech startups, funding, entrepreneurship</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h4 class="font-bold mb-2">📱 Gadgets & Reviews</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Product reviews, tech gadgets, devices</p>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h4 class="font-bold mb-2">🔬 Emerging Technologies</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Blockchain, quantum computing, AR/VR</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold font-space-grotesk mt-8 mb-4">Content Requirements</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li>Articles must be original and not published elsewhere</li>
+                        <li>Include relevant images (with proper attribution or free-to-use)</li>
+                        <li>Use proper heading hierarchy (H2, H3, etc.)</li>
+                        <li>Include at least 3-5 external links to authoritative sources</li>
+                        <li>Ensure proper grammar and spelling</li>
+                        <li>Include a brief author bio (50-100 words)</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold font-space-grotesk mt-8 mb-4">What to Expect</h3>
+                    <ul class="list-disc pl-6 space-y-2 mb-6">
+                        <li>We review all submissions within 5-7 business days</li>
+                        <li>We may request edits or revisions before publication</li>
+                        <li>You'll receive credit as the author with a bio and social links</li>
+                        <li>We reserve the right to edit for clarity, grammar, and SEO</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Submission Form -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 lg:p-12">
+                <h2 class="text-3xl font-bold font-space-grotesk mb-6">Submit Your Article</h2>
+                <form id="submissionForm" class="space-y-6">
+                    <div>
+                        <label for="authorName" class="block text-sm font-semibold mb-2">Your Name</label>
+                        <input type="text" id="authorName" name="authorName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="authorEmail" class="block text-sm font-semibold mb-2">Email Address</label>
+                        <input type="email" id="authorEmail" name="authorEmail" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="authorBio" class="block text-sm font-semibold mb-2">Author Bio (50-100 words)</label>
+                        <textarea id="authorBio" name="authorBio" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label for="articleTitle" class="block text-sm font-semibold mb-2">Article Title</label>
+                        <input type="text" id="articleTitle" name="articleTitle" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="articleCategory" class="block text-sm font-semibold mb-2">Category</label>
+                        <select id="articleCategory" name="articleCategory" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Select a category</option>
+                            <option value="ai">AI Insights</option>
+                            <option value="robotics">Robotics</option>
+                            <option value="startups">Startups</option>
+                            <option value="gadgets">Gadgets</option>
+                            <option value="reviews">Reviews</option>
+                            <option value="innovations">Innovations</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="articleContent" class="block text-sm font-semibold mb-2">Article Content</label>
+                        <textarea id="articleContent" name="articleContent" rows="12" required placeholder="Paste your article content here (1,000-2,500 words)..." class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                    </div>
+                    <div>
+                        <label for="articleLinks" class="block text-sm font-semibold mb-2">Reference Links (one per line)</label>
+                        <textarea id="articleLinks" name="articleLinks" rows="4" placeholder="https://example.com/source1&#10;https://example.com/source2" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"></textarea>
+                    </div>
+                    <div class="flex items-start">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required class="mt-1 mr-3">
+                        <label for="agreeTerms" class="text-sm text-gray-600 dark:text-gray-400">
+                            I confirm that this article is original, hasn't been published elsewhere, and I grant TechPulse the right to edit and publish it.
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all">
+                        Submit Article
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">About TechPulse</h3>
+                    <p class="text-gray-400 mb-4">Empowering readers to stay ahead in AI, tech, and innovation.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="write-for-us.html" class="footer-link">Write for Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Popular Topics</h3>
+                    <ul class="space-y-2">
+                        <li><a href="category.html?cat=ai" class="footer-link">AI</a></li>
+                        <li><a href="category.html?cat=gadgets" class="footer-link">Gadgets</a></li>
+                        <li><a href="category.html?cat=reviews" class="footer-link">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Subscribe</h3>
+                    <form class="space-y-2">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        <button type="submit" class="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 TechPulse — Exploring AI, Tech & Innovation.</p>
+                <button id="backToTop" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors flex items-center gap-2">
+                    <span>Back to Top</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
+

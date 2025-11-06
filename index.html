@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>TechPulse UAE | AI, Technology & Innovation Blog</title>
+    <meta name="description" content="Stay ahead of AI, technology, and innovation trends. Expert insights on artificial intelligence, robotics, startups, gadgets, and tech reviews from UAE.">
+    <meta name="keywords" content="AI blog, technology news, UAE tech, artificial intelligence, robotics, startups, tech reviews, innovation">
+    <meta name="author" content="TechPulse">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.techpulse.ae/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TechPulse UAE | AI, Technology & Innovation Blog">
+    <meta property="og:description" content="Stay ahead of AI, technology, and innovation trends. Expert insights on artificial intelligence, robotics, startups, gadgets, and tech reviews from UAE.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techpulse.ae/">
+    <meta property="og:image" content="https://www.techpulse.ae/assets/og-image.jpg">
+    <meta property="og:site_name" content="TechPulse">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TechPulse UAE | AI, Technology & Innovation Blog">
+    <meta name="twitter:description" content="Stay ahead of AI, technology, and innovation trends. Expert insights on artificial intelligence, robotics, startups, gadgets, and tech reviews from UAE.">
+    <meta name="twitter:image" content="https://www.techpulse.ae/assets/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TechPulse",
+      "url": "https://www.techpulse.ae",
+      "description": "AI, Technology & Innovation Blog from UAE",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TechPulse",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.techpulse.ae/assets/logo.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.techpulse.ae/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
+    <!-- Header (Sticky) -->
+    <header id="header" class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800">
+        <nav class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold font-space-grotesk bg-gradient-to-r from-blue-500 to-emerald-500 bg-clip-text text-transparent">
+                        TechPulse
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="category.html" class="nav-link">Categories</a>
+                    <a href="category.html?cat=ai" class="nav-link">AI</a>
+                    <a href="category.html?cat=gadgets" class="nav-link">Gadgets</a>
+                    <a href="category.html?cat=startups" class="nav-link">Startups</a>
+                    <a href="category.html?cat=reviews" class="nav-link">Reviews</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Icon -->
+                    <button id="searchBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Search">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle dark mode">
+                        <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-800 pt-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="nav-link-mobile">Home</a>
+                    <a href="category.html" class="nav-link-mobile">Categories</a>
+                    <a href="category.html?cat=ai" class="nav-link-mobile">AI</a>
+                    <a href="category.html?cat=gadgets" class="nav-link-mobile">Gadgets</a>
+                    <a href="category.html?cat=startups" class="nav-link-mobile">Startups</a>
+                    <a href="category.html?cat=reviews" class="nav-link-mobile">Reviews</a>
+                    <a href="about.html" class="nav-link-mobile">About</a>
+                    <a href="contact.html" class="nav-link-mobile">Contact</a>
+                    <a href="write-for-us.html" class="nav-link-mobile">Write for Us</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Search Modal -->
+    <div id="searchModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center pt-20 px-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-2xl p-6">
+            <div class="flex items-center space-x-4 mb-4">
+                <input type="text" id="searchInput" placeholder="Search articles..." class="flex-1 px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="closeSearch" class="px-4 py-3 bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">Cancel</button>
+            </div>
+            <div id="searchResults" class="space-y-2"></div>
+        </div>
+    </div>
+    
+    <!-- Main Content with Sidebar -->
+    <div class="container mx-auto px-4 lg:px-6 py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3 space-y-12">
+    
+    <!-- Hero Section (Featured Blogs) -->
+    <section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Featured Post -->
+            <article class="lg:col-span-2 featured-card group">
+                <div class="relative overflow-hidden rounded-2xl h-full min-h-[400px] lg:min-h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="Future of AI in 2025" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white">
+                        <span class="inline-block px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full mb-3">AI Insights</span>
+                        <h1 class="text-3xl lg:text-4xl font-bold font-space-grotesk mb-3 group-hover:text-blue-400 transition-colors">
+                            <a href="single-post.html">The Future of AI: How Machine Learning is Transforming Industries in 2025</a>
+                        </h1>
+                        <p class="text-gray-200 mb-4 line-clamp-2">Discover how artificial intelligence and machine learning are revolutionizing business operations, healthcare, and everyday life across the globe.</p>
+                        <a href="single-post.html" class="inline-flex items-center text-white font-semibold hover:text-blue-400 transition-colors">
+                            Read More
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Side Featured Posts -->
+            <div class="space-y-6">
+                <article class="featured-card group">
+                    <div class="relative overflow-hidden rounded-2xl h-48">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="Latest Robotics Innovation" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                            <span class="inline-block px-2 py-1 bg-emerald-500 text-white text-xs font-semibold rounded-full mb-2">Robotics</span>
+                            <h2 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-emerald-400 transition-colors">
+                                <a href="single-post.html">Revolutionary Robotics: The Next Wave of Automation</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="featured-card group">
+                    <div class="relative overflow-hidden rounded-2xl h-48">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Tech Startup Trends" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                            <span class="inline-block px-2 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full mb-2">Startups</span>
+                            <h2 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-purple-400 transition-colors">
+                                <a href="single-post.html">UAE Tech Startups: Leading Innovation in 2025</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="featured-card group">
+                    <div class="relative overflow-hidden rounded-2xl h-48">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80" alt="Latest Gadget Review" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                            <span class="inline-block px-2 py-1 bg-orange-500 text-white text-xs font-semibold rounded-full mb-2">Reviews</span>
+                            <h2 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-orange-400 transition-colors">
+                                <a href="single-post.html">Top 10 Must-Have Tech Gadgets for 2025</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trending Tech & AI Articles -->
+    <section class="bg-gray-50 dark:bg-gray-800/50 py-12 -mx-4 lg:-mx-6 px-4 lg:px-6">
+        <div>
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                    <span class="mr-3">🔥</span>
+                    Trending in Tech
+                </h2>
+                <a href="category.html" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-semibold hidden md:block">View All</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="ChatGPT 5 Release" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">AI</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        <span>2.5K views</span>
+                        <span class="mx-2">•</span>
+                        <span>3 days ago</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        <a href="single-post.html">ChatGPT-5: What to Expect from the Next Generation</a>
+                    </h3>
+                </article>
+                
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Quantum Computing Breakthrough" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-emerald-500 text-white text-xs font-semibold rounded-full">Innovation</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        <span>1.8K views</span>
+                        <span class="mx-2">•</span>
+                        <span>5 days ago</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        <a href="single-post.html">Quantum Computing Breakthrough: What It Means for AI</a>
+                    </h3>
+                </article>
+                
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="AR VR Future" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full">Gadgets</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        <span>1.2K views</span>
+                        <span class="mx-2">•</span>
+                        <span>1 week ago</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        <a href="single-post.html">AR & VR: The Future of Immersive Technology</a>
+                    </h3>
+                </article>
+                
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Cybersecurity Trends" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3">
+                            <span class="px-2 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">Security</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        <span>950 views</span>
+                        <span class="mx-2">•</span>
+                        <span>1 week ago</span>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                        <a href="single-post.html">Cybersecurity Trends: Protecting Your Digital Future</a>
+                    </h3>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Latest Blog Posts -->
+    <section>
+        <h2 class="text-3xl font-bold font-space-grotesk mb-8">Latest Articles</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="AI in Healthcare" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">AI Insights</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Sarah Al-Mansoori</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-15">Jan 15, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">AI in Healthcare: Revolutionizing Patient Care</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Exploring how artificial intelligence is transforming medical diagnosis, treatment plans, and patient outcomes in modern healthcare systems.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="Smart Home Technology" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">Gadgets</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Ahmed Hassan</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-14">Jan 14, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">Smart Home Technology: The Complete Guide for 2025</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">A comprehensive guide to the latest smart home devices, automation systems, and IoT innovations that are making homes smarter.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Blockchain Technology" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm font-semibold rounded-full">Innovation</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Fatima Al-Zahra</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-13">Jan 13, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">Blockchain Beyond Cryptocurrency: Real-World Applications</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Understanding how blockchain technology is being used in supply chain management, healthcare, finance, and beyond.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80" alt="5G Technology Impact" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-orange-500 text-white text-sm font-semibold rounded-full">Tech News</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Mohammed Al-Rashid</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-12">Jan 12, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">5G Technology: Transforming Connectivity Across UAE</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">How 5G networks are revolutionizing mobile connectivity, IoT devices, and smart city initiatives in the United Arab Emirates.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="Machine Learning Guide" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">AI Insights</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Layla Al-Mahmoud</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-11">Jan 11, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">Machine Learning for Beginners: A Comprehensive Guide</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">Start your journey into machine learning with this beginner-friendly guide covering algorithms, tools, and real-world applications.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-56 mb-4">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Tech Startup Funding" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm font-semibold rounded-full">Startups</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Khalid Al-Suwaidi</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-10">Jan 10, 2025</time>
+                </div>
+                <h3 class="text-xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">UAE Startup Ecosystem: Funding Trends and Opportunities</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">An analysis of the thriving startup scene in the UAE, including funding rounds, investor trends, and emerging opportunities.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button id="loadMoreBtn" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                Load More Articles
+            </button>
+        </div>
+    </section>
+    
+    <!-- AI Insights Section - Masonry Layout -->
+    <section class="bg-gray-50 dark:bg-gray-800/50 py-12 -mx-4 lg:-mx-6 px-4 lg:px-6">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                <span class="w-1 h-8 bg-gradient-to-b from-blue-500 to-emerald-500 mr-3 rounded-full"></span>
+                AI Insights
+            </h2>
+            <a href="category.html?cat=ai" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-semibold">View All AI Articles →</a>
+        </div>
+        
+        <!-- Masonry-style grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Large card -->
+            <article class="md:col-span-2 post-card group">
+                <div class="relative overflow-hidden rounded-xl h-64 mb-4">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="AI Revolution" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full">AI Insights</span>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <span>By Sarah Al-Mansoori</span>
+                    <span class="mx-2">•</span>
+                    <time datetime="2025-01-15">Jan 15, 2025</time>
+                </div>
+                <h3 class="text-2xl font-bold font-space-grotesk mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">The AI Revolution: How Machine Learning is Reshaping Industries</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">Discover how artificial intelligence and machine learning are revolutionizing business operations, healthcare, and everyday life across the globe in 2025.</p>
+                <a href="single-post.html" class="inline-flex items-center text-blue-500 hover:text-blue-600 dark:text-blue-400 font-semibold">
+                    Read More
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </article>
+            
+            <!-- Small cards -->
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-40 mb-4">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&q=80" alt="ChatGPT" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">ChatGPT-5: Next Generation AI</a>
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">3 days ago</p>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-40 mb-4">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="AI Healthcare" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">AI in Healthcare: Transforming Patient Care</a>
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">5 days ago</p>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-40 mb-4">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Neural Networks" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                    <a href="single-post.html">Understanding Neural Networks: A Beginner's Guide</a>
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">1 week ago</p>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Gadgets Section - Horizontal Scroll -->
+    <section class="py-12">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                <span class="w-1 h-8 bg-gradient-to-b from-emerald-500 to-purple-500 mr-3 rounded-full"></span>
+                Latest Gadgets
+            </h2>
+            <a href="category.html?cat=gadgets" class="text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 font-semibold">View All Gadgets →</a>
+        </div>
+        
+        <!-- Horizontal Scroll Container -->
+        <div class="overflow-x-auto scrollbar-hide pb-4">
+            <div class="flex gap-6" style="min-width: max-content;">
+                <article class="post-card group flex-shrink-0" style="width: 320px;">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&q=80" alt="Smart Watch" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">Gadgets</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+                        <a href="single-post.html">Top Smartwatches of 2025: Complete Comparison</a>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">2 days ago</p>
+                </article>
+                
+                <article class="post-card group flex-shrink-0" style="width: 320px;">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="Smart Home" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">Gadgets</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+                        <a href="single-post.html">Smart Home Devices: The Ultimate Buying Guide</a>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">4 days ago</p>
+                </article>
+                
+                <article class="post-card group flex-shrink-0" style="width: 320px;">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80" alt="VR Headset" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">Gadgets</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+                        <a href="single-post.html">Best VR Headsets for 2025: Immersive Experience</a>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">6 days ago</p>
+                </article>
+                
+                <article class="post-card group flex-shrink-0" style="width: 320px;">
+                    <div class="relative overflow-hidden rounded-xl h-48 mb-4">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Wireless Earbuds" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-semibold rounded-full">Gadgets</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors">
+                        <a href="single-post.html">Wireless Earbuds: Top Picks for Every Budget</a>
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">1 week ago</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Startups Section - Zigzag Layout -->
+    <section class="bg-gray-50 dark:bg-gray-800/50 py-12 -mx-4 lg:-mx-6 px-4 lg:px-6">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                <span class="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 mr-3 rounded-full"></span>
+                Startup Spotlight
+            </h2>
+            <a href="category.html?cat=startups" class="text-purple-500 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 font-semibold">View All Startups →</a>
+        </div>
+        
+        <!-- Zigzag layout -->
+        <div class="space-y-8">
+            <article class="post-card group flex flex-col md:flex-row items-center gap-6">
+                <div class="relative overflow-hidden rounded-xl w-full md:w-80 h-64 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="UAE Startup" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-purple-500 text-white text-sm font-semibold rounded-full">Startups</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                        <span>By Khalid Al-Suwaidi</span>
+                        <span class="mx-2">•</span>
+                        <time datetime="2025-01-13">Jan 13, 2025</time>
+                    </div>
+                    <h3 class="text-2xl font-bold font-space-grotesk mb-3 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors">
+                        <a href="single-post.html">UAE Tech Startups: Leading Innovation in 2025</a>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">An in-depth look at the thriving startup ecosystem in the United Arab Emirates, featuring success stories, funding trends, and emerging opportunities.</p>
+                    <a href="single-post.html" class="inline-flex items-center text-purple-500 hover:text-purple-600 dark:text-purple-400 font-semibold">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+            
+            <article class="post-card group flex flex-col md:flex-row-reverse items-center gap-6">
+                <div class="relative overflow-hidden rounded-xl w-full md:w-80 h-64 flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Funding Round" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-pink-500 text-white text-sm font-semibold rounded-full">Funding</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                        <span>By Fatima Al-Zahra</span>
+                        <span class="mx-2">•</span>
+                        <time datetime="2025-01-12">Jan 12, 2025</time>
+                    </div>
+                    <h3 class="text-2xl font-bold font-space-grotesk mb-3 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors">
+                        <a href="single-post.html">Q1 2025: Record Funding Rounds in UAE Tech Sector</a>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Breaking down the biggest funding rounds, investor trends, and what's driving the surge in tech startup investments.</p>
+                    <a href="single-post.html" class="inline-flex items-center text-purple-500 hover:text-purple-600 dark:text-purple-400 font-semibold">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- Reviews Section - Card Stack Layout -->
+    <section class="py-12">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                <span class="w-1 h-8 bg-gradient-to-b from-orange-500 to-red-500 mr-3 rounded-full"></span>
+                Tech Reviews
+            </h2>
+            <a href="category.html?cat=reviews" class="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 font-semibold">View All Reviews →</a>
+        </div>
+        
+        <!-- Stacked cards with different sizes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="post-card group md:col-span-2">
+                <div class="relative overflow-hidden rounded-xl h-72 mb-4">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="iPhone Review" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-orange-500 text-white text-sm font-semibold rounded-full">Reviews</span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="flex items-center gap-1 mb-2">
+                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                            <span class="text-white text-sm ml-2">4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold font-space-grotesk mb-3 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
+                    <a href="single-post.html">iPhone 16 Pro Max: Complete In-Depth Review</a>
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">We tested the latest iPhone for 30 days. Here's our comprehensive review covering performance, camera, battery life, and more.</p>
+            </article>
+            
+            <div class="space-y-6">
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-32 mb-3">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80" alt="Laptop Review" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2">
+                            <span class="text-yellow-400 text-xs">★★★★☆</span>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold font-space-grotesk group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
+                        <a href="single-post.html">MacBook Pro M3: Performance Review</a>
+                    </h3>
+                </article>
+                
+                <article class="post-card group">
+                    <div class="relative overflow-hidden rounded-xl h-32 mb-3">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80" alt="Tablet Review" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-2 right-2">
+                            <span class="text-yellow-400 text-xs">★★★★★</span>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold font-space-grotesk group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
+                        <a href="single-post.html">iPad Pro 2025: Is It Worth It?</a>
+                    </h3>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Robotics Section - Grid with Featured -->
+    <section class="bg-gray-50 dark:bg-gray-800/50 py-12 -mx-4 lg:-mx-6 px-4 lg:px-6">
+        <div class="mb-8 flex items-center justify-between">
+            <h2 class="text-3xl font-bold font-space-grotesk flex items-center">
+                <span class="w-1 h-8 bg-gradient-to-b from-cyan-500 to-blue-500 mr-3 rounded-full"></span>
+                Robotics & Automation
+            </h2>
+            <a href="category.html?cat=robotics" class="text-cyan-500 hover:text-cyan-600 dark:text-cyan-400 dark:hover:text-cyan-300 font-semibold">View All Robotics →</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Featured large card -->
+            <article class="md:col-span-2 lg:col-span-2 post-card group">
+                <div class="relative overflow-hidden rounded-xl h-80 mb-4">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="Industrial Robot" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="inline-block px-3 py-1 bg-cyan-500 text-white text-sm font-semibold rounded-full mb-3">Robotics</span>
+                        <h3 class="text-2xl font-bold font-space-grotesk mb-2 group-hover:text-cyan-400 transition-colors">
+                            <a href="single-post.html">Industrial Robotics: The Future of Manufacturing</a>
+                        </h3>
+                        <p class="text-gray-200 line-clamp-2">Exploring how advanced robotics are transforming manufacturing processes and creating new opportunities.</p>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Small cards -->
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-40 mb-4">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Service Robot" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+                    <a href="single-post.html">Service Robots: Changing Daily Life</a>
+                </h3>
+            </article>
+            
+            <article class="post-card group">
+                <div class="relative overflow-hidden rounded-xl h-40 mb-4">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="AI Robot" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold font-space-grotesk mb-2 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
+                    <a href="single-post.html">AI-Powered Robots: The Next Generation</a>
+                </h3>
+            </article>
+        </div>
+    </section>
+    
+            </div>
+            
+            <!-- Sticky Trending Sidebar -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-24 space-y-6">
+                    <!-- Trending Posts -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold font-space-grotesk mb-4 flex items-center">
+                            <span class="mr-2">🔥</span>
+                            Trending Now
+                        </h3>
+                        <div class="space-y-4">
+                            <article class="group flex gap-3 pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                                <div class="relative overflow-hidden rounded-lg w-20 h-20 flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=200&q=80" alt="Trending 1" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs text-blue-500 font-semibold">#1 Trending</span>
+                                    <h4 class="font-bold font-space-grotesk text-sm mb-1 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                                        <a href="single-post.html">ChatGPT-5: What to Expect from the Next Generation</a>
+                                    </h4>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400">2.5K views</span>
+                                </div>
+                            </article>
+                            
+                            <article class="group flex gap-3 pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                                <div class="relative overflow-hidden rounded-lg w-20 h-20 flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=80" alt="Trending 2" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs text-emerald-500 font-semibold">#2 Trending</span>
+                                    <h4 class="font-bold font-space-grotesk text-sm mb-1 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
+                                        <a href="single-post.html">Quantum Computing Breakthrough: What It Means</a>
+                                    </h4>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400">1.8K views</span>
+                                </div>
+                            </article>
+                            
+                            <article class="group flex gap-3 pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                                <div class="relative overflow-hidden rounded-lg w-20 h-20 flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=200&q=80" alt="Trending 3" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs text-purple-500 font-semibold">#3 Trending</span>
+                                    <h4 class="font-bold font-space-grotesk text-sm mb-1 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors line-clamp-2">
+                                        <a href="single-post.html">AR & VR: The Future of Immersive Technology</a>
+                                    </h4>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400">1.2K views</span>
+                                </div>
+                            </article>
+                            
+                            <article class="group flex gap-3 pb-4 border-b border-gray-200 dark:border-gray-700 last:border-0">
+                                <div class="relative overflow-hidden rounded-lg w-20 h-20 flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=200&q=80" alt="Trending 4" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs text-orange-500 font-semibold">#4 Trending</span>
+                                    <h4 class="font-bold font-space-grotesk text-sm mb-1 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors line-clamp-2">
+                                        <a href="single-post.html">Cybersecurity Trends: Protecting Your Digital Future</a>
+                                    </h4>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400">950 views</span>
+                                </div>
+                            </article>
+                            
+                            <article class="group flex gap-3">
+                                <div class="relative overflow-hidden rounded-lg w-20 h-20 flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200&q=80" alt="Trending 5" class="w-full h-full object-cover lazy-load group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <span class="text-xs text-red-500 font-semibold">#5 Trending</span>
+                                    <h4 class="font-bold font-space-grotesk text-sm mb-1 group-hover:text-red-500 dark:group-hover:text-red-400 transition-colors line-clamp-2">
+                                        <a href="single-post.html">The Future of AI: Machine Learning Transforming Industries</a>
+                                    </h4>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400">820 views</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Sidebar -->
+                    <div class="bg-gradient-to-r from-blue-500 to-emerald-500 rounded-2xl p-6 text-white">
+                        <h3 class="text-xl font-bold font-space-grotesk mb-3">Stay Updated</h3>
+                        <p class="text-sm text-blue-50 mb-4">Get the latest tech news delivered to your inbox weekly.</p>
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                            <button type="submit" class="w-full px-4 py-2 bg-white text-blue-500 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Popular Categories -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold font-space-grotesk mb-4">Popular Categories</h3>
+                        <div class="space-y-2">
+                            <a href="category.html?cat=ai" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group">
+                                <span class="font-semibold group-hover:text-blue-500 dark:group-hover:text-blue-400">AI Insights</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">42 articles</span>
+                            </a>
+                            <a href="category.html?cat=gadgets" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group">
+                                <span class="font-semibold group-hover:text-emerald-500 dark:group-hover:text-emerald-400">Gadgets</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">38 articles</span>
+                            </a>
+                            <a href="category.html?cat=startups" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group">
+                                <span class="font-semibold group-hover:text-purple-500 dark:group-hover:text-purple-400">Startups</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">35 articles</span>
+                            </a>
+                            <a href="category.html?cat=reviews" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group">
+                                <span class="font-semibold group-hover:text-orange-500 dark:group-hover:text-orange-400">Reviews</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">28 articles</span>
+                            </a>
+                            <a href="category.html?cat=robotics" class="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group">
+                                <span class="font-semibold group-hover:text-cyan-500 dark:group-hover:text-cyan-400">Robotics</span>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">24 articles</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <!-- Newsletter Subscription Section -->
+    <section class="container mx-auto px-4 lg:px-6 py-16">
+        <div class="max-w-3xl mx-auto text-center bg-gradient-to-r from-blue-500 to-emerald-500 rounded-3xl p-8 lg:p-12 text-white">
+            <h2 class="text-3xl lg:text-4xl font-bold font-space-grotesk mb-4">Stay Ahead of AI & Tech Trends</h2>
+            <p class="text-lg mb-8 text-blue-50">Get weekly insights, exclusive articles, and the latest tech news delivered to your inbox.</p>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email address" required class="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                <button type="submit" class="px-8 py-4 bg-white text-blue-500 font-semibold rounded-full hover:bg-gray-100 transition-colors">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-sm text-blue-50 mt-4">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+    
+    <!-- Featured Author / About Highlight -->
+    <section class="container mx-auto px-4 lg:px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8">
+                <div class="flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="TechPulse Founder" class="w-32 h-32 rounded-full object-cover border-4 border-blue-500">
+                </div>
+                <div class="text-center lg:text-left">
+                    <h2 class="text-2xl font-bold font-space-grotesk mb-3">About TechPulse</h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                        TechPulse is your trusted source for cutting-edge insights into artificial intelligence, technology innovations, and startup ecosystems. Founded in the UAE, we're dedicated to empowering readers with expert analysis, in-depth reviews, and the latest trends shaping the future of tech.
+                    </p>
+                    <div class="flex items-center justify-center lg:justify-start space-x-4">
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">About TechPulse</h3>
+                    <p class="text-gray-400 mb-4">Empowering readers to stay ahead in AI, tech, and innovation. Your trusted source for technology insights from the UAE.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon-footer" aria-label="Twitter">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon-footer" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon-footer" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon-footer" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="write-for-us.html" class="footer-link">Write for Us</a></li>
+                        <li><a href="category.html" class="footer-link">All Categories</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Popular Topics Column -->
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Popular Topics</h3>
+                    <ul class="space-y-2">
+                        <li><a href="category.html?cat=ai" class="footer-link">Artificial Intelligence</a></li>
+                        <li><a href="category.html?cat=gadgets" class="footer-link">Gadgets & Devices</a></li>
+                        <li><a href="category.html?cat=reviews" class="footer-link">Tech Reviews</a></li>
+                        <li><a href="category.html?cat=startups" class="footer-link">Startups & Funding</a></li>
+                        <li><a href="category.html?cat=robotics" class="footer-link">Robotics</a></li>
+                        <li><a href="category.html?cat=innovations" class="footer-link">Innovations</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Subscribe Column -->
+                <div>
+                    <h3 class="text-xl font-bold font-space-grotesk text-white mb-4">Stay Updated</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest tech news and insights.</p>
+                    <form class="flex flex-col gap-2">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white">
+                        <button type="submit" class="px-4 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 TechPulse — Exploring AI, Tech & Innovation.</p>
+                <button id="backToTop" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors flex items-center gap-2">
+                    <span>Back to Top</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
